@@ -15,6 +15,7 @@ public class Main {
         window.setVisible(true);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel.setBackground(new Color(247, 68, 68));
+        window.setResizable(false);
         window.add(panel);
     }
 }
