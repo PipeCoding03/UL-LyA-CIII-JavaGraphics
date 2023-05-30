@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Part4 extends JFrame {
-    int WIDTH = 700;
-    int HEIGHT = 750;
+    int WIDTH = 600;
+    int HEIGHT = 600;
     JPanel panel = new JPanel();
 
     public Part4() {
