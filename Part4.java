@@ -5,13 +5,13 @@ import java.awt.Graphics2D;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Part1 extends JFrame {
-    int WIDTH = 600;
-    int HEIGHT = 600;
+public class Part4 extends JFrame {
+    int WIDTH = 700;
+    int HEIGHT = 750;
     JPanel panel = new JPanel();
 
-    public Part1() {
-        setTitle("Gráfico #1");
+    public Part4() {
+        setTitle("Gráfico #4");
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -26,7 +26,6 @@ public class Part1 extends JFrame {
 
         Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke(3)); 
-        g2d.setColor(new Color(0, 80, 220));
 
         int Xo = 50, Yo = 550;
         int Xf = 550, Yf = 550;
@@ -35,6 +34,11 @@ public class Part1 extends JFrame {
         int botLX = Xo, botLY = Yo;
 
         for (int i = 0; i < 11; i++){
+            if (i % 2 == 0){
+                g2d.setColor(new Color(0, 80, 220));
+            } else {
+                g2d.setColor(new Color(220, 0, 80));
+            }
             g2d.drawLine(botLX, botLY, botRX, botRY);
             g2d.drawLine(botRX, botRY, topX, topY);
             g2d.drawLine(topX, topY, botLX, botLY);
