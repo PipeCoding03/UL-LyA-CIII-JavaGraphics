@@ -4,6 +4,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 public class Main {
     public static void main(String[] args){
@@ -14,11 +15,7 @@ public class Main {
         int BORDER = 40;
         JFrame window = new JFrame("Java Graphics");
         JPanel panel = new JPanel();
-        JButton pt1_button = new JButton("Gráfico #1");
-        JButton pt2_button = new JButton("Gráfico #2");
-        JButton pt3_button = new JButton("Gráfico #3");
-        JButton pt4_button = new JButton("Gráfico #4");
-        JButton pt5_button = new JButton("Gráfico #5");
+        JButton buttons[] = new JButton[5];
 
         window.setSize(WIDTH, HEIGHT);
         window.setLocationRelativeTo(null);
@@ -28,18 +25,20 @@ public class Main {
         panel.setLayout(null);
         window.getContentPane().add(panel);
         panel.setBackground(new Color(247, 68, 68));
-        pt1_button.setBounds(BORDER, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
-        panel.add(pt1_button);
-        pt2_button.setBounds(BORDER + BUTTON_WIDTH + 30, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
-        panel.add(pt2_button);
-        pt3_button.setBounds(BORDER + BUTTON_WIDTH * 2 + 30 * 2, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
-        panel.add(pt3_button);
-        pt4_button.setBounds(BORDER + BUTTON_WIDTH * 3 + 30 * 3, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
-        panel.add(pt4_button);
-        pt5_button.setBounds(BORDER + BUTTON_WIDTH * 4 + 30 * 4, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
-        panel.add(pt5_button);
 
-        pt1_button.addMouseListener(new MouseListener(){
+        for (int i = 0; i < buttons.length; i++){
+            buttons[i] = new JButton("Gráfico #" + (i + 1));
+            buttons[i].setBounds(BORDER + BUTTON_WIDTH * i + 30 * i, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
+            panel.add(buttons[i]);
+        }
+
+        for (JButton button: buttons){
+            button.setBackground(new Color(43, 113, 228));
+            button.setForeground(Color.WHITE);
+            button.setBorder(new LineBorder(Color.BLACK, 3));
+        }
+
+        buttons[0].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
                 new Part1();
@@ -51,7 +50,7 @@ public class Main {
             @Override public void mouseExited(MouseEvent e){}
         });
 
-        pt2_button.addMouseListener(new MouseListener(){
+        buttons[1].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
                 new Part2();
@@ -63,7 +62,7 @@ public class Main {
             @Override public void mouseExited(MouseEvent e){}
         });
 
-        pt3_button.addMouseListener(new MouseListener(){
+        buttons[2].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
                 new Part3();
@@ -75,7 +74,7 @@ public class Main {
             @Override public void mouseExited(MouseEvent e){}
         });
 
-        pt4_button.addMouseListener(new MouseListener(){
+        buttons[3].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
                 new Part4();
@@ -87,7 +86,7 @@ public class Main {
             @Override public void mouseExited(MouseEvent e){}
         });
 
-        pt5_button.addMouseListener(new MouseListener(){
+        buttons[4].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
                 new Part5();
