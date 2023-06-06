@@ -97,5 +97,38 @@ public class Main {
             @Override public void mouseEntered(MouseEvent e){}
             @Override public void mouseExited(MouseEvent e){}
         });
+        buttons[4].addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                new Part5();
+            }
+
+            @Override public void mousePressed(MouseEvent e){}
+            @Override public void mouseReleased(MouseEvent e){}
+            @Override public void mouseEntered(MouseEvent e){}
+            @Override public void mouseExited(MouseEvent e){}
+        });
+        buttons[4].addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                new Part5();
+            }
+
+            @Override public void mousePressed(MouseEvent e){}
+            @Override public void mouseReleased(MouseEvent e){}
+            @Override public void mouseEntered(MouseEvent e){}
+            @Override public void mouseExited(MouseEvent e){}
+        });
+        buttons[4].addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                new Part5();
+            }
+
+            @Override public void mousePressed(MouseEvent e){}
+            @Override public void mouseReleased(MouseEvent e){}
+            @Override public void mouseEntered(MouseEvent e){}
+            @Override public void mouseExited(MouseEvent e){}
+        });
     }
 }
