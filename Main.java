@@ -97,10 +97,10 @@ public class Main {
             @Override public void mouseEntered(MouseEvent e){}
             @Override public void mouseExited(MouseEvent e){}
         });
-        buttons[4].addMouseListener(new MouseListener(){
+        buttons[5].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
-                new Part5();
+                new Part6();
             }
 
             @Override public void mousePressed(MouseEvent e){}
@@ -108,10 +108,10 @@ public class Main {
             @Override public void mouseEntered(MouseEvent e){}
             @Override public void mouseExited(MouseEvent e){}
         });
-        buttons[4].addMouseListener(new MouseListener(){
+        buttons[6].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
-                new Part5();
+                new Part7();
             }
 
             @Override public void mousePressed(MouseEvent e){}
@@ -119,10 +119,32 @@ public class Main {
             @Override public void mouseEntered(MouseEvent e){}
             @Override public void mouseExited(MouseEvent e){}
         });
-        buttons[4].addMouseListener(new MouseListener(){
+        buttons[7].addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent e){
-                new Part5();
+                new Part8();
+            }
+
+            @Override public void mousePressed(MouseEvent e){}
+            @Override public void mouseReleased(MouseEvent e){}
+            @Override public void mouseEntered(MouseEvent e){}
+            @Override public void mouseExited(MouseEvent e){}
+        });
+        buttons[8].addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                new Part9();
+            }
+
+            @Override public void mousePressed(MouseEvent e){}
+            @Override public void mouseReleased(MouseEvent e){}
+            @Override public void mouseEntered(MouseEvent e){}
+            @Override public void mouseExited(MouseEvent e){}
+        });
+        buttons[9].addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                new Part10();
             }
 
             @Override public void mousePressed(MouseEvent e){}
