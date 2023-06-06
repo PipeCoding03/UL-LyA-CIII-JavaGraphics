@@ -8,14 +8,14 @@ import javax.swing.border.LineBorder;
 
 public class Main {
     public static void main(String[] args){
-        int WIDTH = 710;
-        int HEIGHT = 450;
+        int WIDTH = 720;
+        int HEIGHT = 230;
         int BUTTON_WIDTH = 100;
         int BUTTON_HEIGHT = 40;
         int BORDER = 40;
         JFrame window = new JFrame("Java Graphics");
         JPanel panel = new JPanel();
-        JButton buttons[] = new JButton[5];
+        JButton buttons[] = new JButton[10];
 
         window.setSize(WIDTH, HEIGHT);
         window.setLocationRelativeTo(null);
@@ -28,7 +28,11 @@ public class Main {
 
         for (int i = 0; i < buttons.length; i++){
             buttons[i] = new JButton("Gráfico #" + (i + 1));
-            buttons[i].setBounds(BORDER + BUTTON_WIDTH * i + 30 * i, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
+            if (i < 5){
+                buttons[i].setBounds(BORDER + BUTTON_WIDTH * i + 30 * i, BORDER, BUTTON_WIDTH, BUTTON_HEIGHT);
+            } else {
+                buttons[i].setBounds(BORDER + BUTTON_WIDTH * (i - 5) + 30 * (i - 5), BORDER + BUTTON_HEIGHT + 30, BUTTON_WIDTH, BUTTON_HEIGHT);
+            }
             panel.add(buttons[i]);
         }
 
