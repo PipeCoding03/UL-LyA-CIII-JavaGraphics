@@ -10,7 +10,7 @@ public class Part4 extends JFrame {
     int HEIGHT = 600;
     JPanel panel = new JPanel();
 
-    public Part4() {
+    public Part4(){
         setTitle("Gráfico #4");
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
@@ -21,7 +21,7 @@ public class Part4 extends JFrame {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paint(Graphics g){
         super.paint(g);
 
         Graphics2D g2d = (Graphics2D) g;
@@ -39,6 +39,7 @@ public class Part4 extends JFrame {
             } else {
                 g2d.setColor(new Color(220, 0, 80));
             }
+            
             g2d.drawLine(botLX, botLY, botRX, botRY);
             g2d.drawLine(botRX, botRY, topX, topY);
             g2d.drawLine(topX, topY, botLX, botLY);

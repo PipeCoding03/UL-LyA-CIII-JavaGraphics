@@ -6,11 +6,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Part7 extends JFrame {
-    int WIDTH = 1500;
-    int HEIGHT = 1500;
+    int WIDTH = 700;
+    int HEIGHT = 720;
     JPanel panel = new JPanel();
 
-    public Part7() {
+    public Part7(){
         setTitle("Gráfico #7");
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
@@ -21,31 +21,41 @@ public class Part7 extends JFrame {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paint(Graphics g){
         super.paint(g);
 
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setStroke(new BasicStroke(3));
+        g2d.setStroke(new BasicStroke(2));
         g2d.setColor(new Color(0, 80, 220));
 
-        int Xo = 670, Yo = 670;
-        int Xf = 30, Yf = 670;
+        int Xo = 700 / 2, Yo = 700 / 2;
+        int Xf = 30, Yf = 700 / 2;
         int space = (Xo - Xf) / 29;
 
         for (int i = 0; i < 29; i++){
             g2d.drawLine(Xo, Yo, Xf + space * i, Yf - space * i);
-
         }
+
+        g2d.setColor(new Color(220, 0, 80));
+        Xo = 700 / 2;
+        Yo = 700 / 2;
+        Xf = 670;
+        Yf = 700 / 2;
+        space = (Xo - Xf) / 29;
+
         for (int i = 0; i < 29; i++){
-            g2d.setColor(new Color(220, 0, 80));
-            g2d.drawLine(Xo, Yo, 1310 + space * i, Yf - space * i);
-
+            g2d.drawLine(Xo, Yo, Xf + space * i, Yf - space * i);
         }
+
+        g2d.setColor(new Color(0, 240, 60));
+        Xo = 700 / 2;
+        Yo = 700 / 2;
+        Xf = 670;
+        Yf = 700 / 2;
+        space = (Xo - Xf) / 29;
+
         for (int i = 0; i < 29; i++){
-            g2d.setColor(new Color(50, 182, 68));
-            g2d.drawLine(Xo, Yo, 670 + space * i, Yf - space * i);
-
+            g2d.drawLine(Xo, Yo, Xf + space * i, Yf + space * i);
         }
-
     }
 }

@@ -10,7 +10,7 @@ public class Part2 extends JFrame {
     int HEIGHT = 730;
     JPanel panel = new JPanel();
 
-    public Part2() {
+    public Part2(){
         setTitle("Gráfico #2");
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
@@ -21,7 +21,7 @@ public class Part2 extends JFrame {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paint(Graphics g){
         super.paint(g);
 
         Graphics2D g2d = (Graphics2D) g;
