@@ -31,10 +31,8 @@ public class Part8 extends JFrame {
         int diff = 60;
         int Xo = 50, Yo = 800 - 50;
         int Xf = Yo, Yf = Yo;
-        int topX = ((Xf - Xo) / 2) + Xo, topY = Xo;
         int botRX = Xf, botRY = Yf;
         int botLX = Xo, botLY = Yo;
-        int Grosor = 2;
 
         for (int i = 0; i < 27; i++){
             g2d.drawLine(botLX + 26 * i, botLY - diff, botRX - 12 * i, botRY - 24 * i - diff);
