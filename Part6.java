@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Part6 extends JFrame {
-    int WIDTH = 1500;
-    int HEIGHT = 1500;
+    int WIDTH = 700;
+    int HEIGHT = 720;
     JPanel panel = new JPanel();
 
     public Part6() {
@@ -25,22 +25,24 @@ public class Part6 extends JFrame {
         super.paint(g);
 
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setStroke(new BasicStroke(3));
+        g2d.setStroke(new BasicStroke(2));
         g2d.setColor(new Color(0, 80, 220));
 
-        int Xo = 670, Yo = 670;
-        int Xf = 30, Yf = 670;
+        int Xo = 700 / 2, Yo = 700 / 2;
+        int Xf = 30, Yf = 700 / 2;
         int space = (Xo - Xf) / 29;
 
         for (int i = 0; i < 29; i++){
             g2d.drawLine(Xo, Yo, Xf + space * i, Yf - space * i);
-            g2d.drawLine(Xo, Yo, 1310 + space * i, Yf - space * i);
-
         }
-        for (int i = 0; i < 29; i++){
-            g2d.setColor(new Color(220, 0, 80));
-            g2d.drawLine(Xo, Yo, 1310 + space * i, Yf - space * i);
 
+        g2d.setColor(new Color(220, 0, 80));
+        Xf = 670;
+        Yf = 700 / 2;
+        space = (Xo - Xf) / 29;
+
+        for (int i = 0; i < 29; i++){
+            g2d.drawLine(Xo, Yo, Xf + space * i, Yf - space * i);
         }
     }
 }
